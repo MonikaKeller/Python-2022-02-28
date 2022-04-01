@@ -1,0 +1,55 @@
+Create – happy ág
+Előfeltétele:
+Bejön a weboldal, gomb megtalálható és kattintható
+Nincsenek adatok
+Tesztlépések:
+1.	Nyomj rá a `Create location` linkre
+2.	A következő adatokat írjuk be a mezők: `Home`, `1,1`, a többi mező maradjon üresen
+3. Rányomunk a `Create location` gombra
+
+Elvárt eredmény:
+1.	Az űrlap elmentődik, a sikeres felvétel esetén `Location has been created` 
+üzenet érkezik, a felvett értékek megjelennek a táblázatban az első sorban
+
+Create – negatív ág
+
+Előfeltétele:
+Bejön a weboldal, gomb megtalálható és kattintható
+Nincsenek adatok
+Tesztlépések:
+4.	Nyomj rá a gombra
+6.	Hagyd üresen a Name mezőt, majd nyomj a `Create location` gombra
+
+Elvárt eredmény:
+6.	figyelmeztetés érkezik, táblázatba nem kerülhet be az érték
+
+Delete
+
+Előfeltétele:
+Bejön a weboldal, gomb megtalálható és kattintható, vannak felvett adatok
+Tesztlépések:
+1.	Válasszunk ki egy sort
+2.	Nyomj rá a gombra
+3.	Válaszd ki a ’Cancel’-t
+4.	Válaszd ki a ’Delete location’
+
+Elvárt eredmény:
+1.	Érkezik megerősítés váró üzenet
+2.	A törlés nem hajtódik végre
+3.	A törlés végrehajtódik és eltűnt a felugró szöveg, a táblázat az első oldalra ugrott automatikusan, az adott sor eltűnik
+
+Edit
+Előfeltétele:
+Bejön a weboldal, gomb megtalálható és kattintható, vannak felvett adatok
+Tesztlépések:
+5.	Válasszunk ki egy sort
+6.	Nyomj rá a gombra
+7.	Módosítsuk az adatokat, úgy, hogy validációnak megfelelő legyen és nyomjunk rá az Update gombra
+8.	Módosítsuk az adatokat, úgy, hogy validációnak nem megfelelő legyen és nyomjunk rá az Update gombra
+9.	Nyomjunk rá a Cancel-re
+
+Elvárt eredmény:
+1.	Megjelenik az űrlap a meglévő adatokkal
+2.	Az adatok sikeresen módosultak és frissültek a táblában, az űrlap bezáródik
+3.	Figyelmeztetés érkezik, adatok nem mentődnek
+4.	Az adatok nem mentődnek az űrlap bezáródik
