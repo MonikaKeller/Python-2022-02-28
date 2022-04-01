@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from locations_po import LocationsPage
 from locations_rest_api import create_location, delete_all_locations
+from read_locations import read_locations
 
 
 
@@ -81,7 +82,16 @@ def test_delete(driver: webdriver.Chrome):
     page.wait_for_message("Location has been deleted")
     page.wait_for_table_has_rows(0)
 
+def test_with_data_driven(driver: webdriver.Chrome):
+    page = LocationsPage (driver)
 
+    for name, coords in read_locations():
+        page.click_on_create_location()
+        page.fill_create_form(name, coords)
+        page.click_on_create_location_submit()
+        page.wait_for_message("Location has been created")
+
+    page.wait_for_table_has_rows(10)
 
 
 

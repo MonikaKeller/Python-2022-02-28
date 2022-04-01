@@ -20,8 +20,8 @@ class LocationsPage:
         self.driver.find_element(By.LINK_TEXT, "Create location").click()
 
     def fill_create_form(self,name,coords):
-        self.driver.find_element(By.ID, "location-name").send_keys("Home")
-        self.driver.find_element(By.ID, "location-coords").send_keys("1,1")
+        self.driver.find_element(By.ID, "location-name").send_keys(name)
+        self.driver.find_element(By.ID, "location-coords").send_keys(coords)
 
     def click_on_create_location_submit(self):
         self.driver.find_element(By.CLASS_NAME, "btn-primary").click()
